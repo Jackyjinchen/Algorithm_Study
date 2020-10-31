@@ -1,0 +1,54 @@
+package leetcodeanswer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class _60µÚk¸öÅÅÁĞ {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n = 3, k = 3;
+		Solution60 sl = new Solution60();
+		System.out.println(sl.getPermutation(n, k));
+
+	}
+
+}
+
+class Solution60 {
+
+	int countk = 0;
+	int countn = 1;
+	int k;
+	int n;
+	String ans = "";
+
+	public String getPermutation(int n, int k) {
+		this.k = k;
+		this.n = n;
+
+		backtrack(1, countk);
+
+		return "";
+	}
+
+	public void backtrack(int countn, int countk) {
+		System.out.println("backtrack");
+		if (countn > n) {
+			if (countk == k) {
+				System.out.println("find");
+				return;
+			}
+			countk++;
+		}
+		for (int i = countn; i < n - countn + 1; i++) {
+
+			countn++;
+			backtrack(countn , k - 1);
+			countn--;
+
+		}
+
+	}
+
+}

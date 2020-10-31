@@ -1,0 +1,16 @@
+package leetcodeanswer;
+
+public class _60µÚk¸öÅÅÁĞ {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Solution60 {
+    public String getPermutation(int n, int k) {
+        
+    }
+}

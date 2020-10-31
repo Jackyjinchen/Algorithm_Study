@@ -1,0 +1,106 @@
+package leetcodeanswer;
+
+public class _148ÅÅÐòÁ´±í {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ListNode148 node1=new ListNode148(1);
+		ListNode148 node2=new ListNode148(2);
+		ListNode148 node3=new ListNode148(4);
+		node1.next=node2;
+		node2.next=node3;
+		
+		
+		ListNode148 node4=new ListNode148(1);
+		ListNode148 node5=new ListNode148(3);
+		ListNode148 node6=new ListNode148(4);
+		node3.next=node4;
+		node4.next=node5;
+		node5.next=node6;
+		
+		node1.print();
+		
+
+		
+		Solution148 sl = new Solution148();
+		
+		sl.sortList(node1).print();
+		sl.split(node1).print();
+		node1.print();
+		
+	}
+
+}
+
+
+class Solution148 {
+    public ListNode148 sortList(ListNode148 head) {
+        
+    	
+    	
+    	
+    	return head;
+    }
+    
+    public ListNode148 split(ListNode148 head) {
+    	
+    	if (head==null||head.next==null) {
+			return head;
+		}
+    	
+		ListNode148 fast=head;
+		ListNode148 slow=head;
+		ListNode148 temp=null;
+		
+		while(fast!=null) {
+			
+			fast=fast.next;
+			if(fast!=null) {
+				fast=fast.next;
+			}
+			if (fast==null) {
+				break;
+			}
+			
+			slow=slow.next;
+			
+		}
+		temp=slow;
+		slow=slow.next;
+		temp.next=null;
+		
+		
+		
+		
+		
+		
+		
+		
+		return slow;
+	}
+    
+    
+    
+    
+    
+}
+
+class ListNode148 {
+    int val;
+    ListNode148 next;
+    ListNode148(int x) { val = x; }
+    
+    public void print() {
+   	 print(this);
+    }
+    
+    public void print(ListNode148 root) {
+		while (root!=null) {
+			System.out.print(root.val+"->");
+			root=root.next;
+		}
+		System.out.println();
+	}
+    
+    
+}

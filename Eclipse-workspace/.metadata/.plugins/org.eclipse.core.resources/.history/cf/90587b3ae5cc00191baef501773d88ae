@@ -1,0 +1,83 @@
+package com.Jacky.BinarySortTree;
+
+import org.graalvm.compiler.core.common.type.ArithmeticOpTable.BinaryOp.Add;
+
+public class BinarySortTreeDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = { 7, 3, 10, 12, 5, 1, 9 };
+		BinarySortTree tree = new BinarySortTree();
+		for (int i = 0; i < 7; i++) {
+			tree.add(new Node(arr[i]));
+		}
+		tree.infixOrder();
+		
+		tree.add(new Node(2));
+		tree.infixOrder();
+
+	}
+
+}
+
+class BinarySortTree {
+	private Node root;
+
+	public void add(Node node) {
+		if (root == null) {
+			root = node;
+		} else {
+			root.add(node);
+		}
+	}
+
+	public void infixOrder() {
+		if (root != null) {
+			root.infixOrder();
+		} else {
+			System.out.println("Empty");
+		}
+	}
+
+}
+
+class Node {
+	int value;
+	Node left;
+	Node right;
+
+	public Node(int value) {
+		this.value = value;
+	}
+
+	public void infixOrder() {
+		if (this.left != null) {
+			this.left.infixOrder();
+		}
+		System.out.println(this.value);
+		if (this.right != null) {
+			this.right.infixOrder();
+		}
+
+	}
+
+	public void add(Node node) {
+		if (node == null) {
+			return;
+		}
+		if (node.value < this.value) {
+			if (this.left == null) {
+				this.left = node;
+			} else {
+				this.left.add(node);
+			}
+		} else {
+			if (this.right == null) {
+				this.right = node;
+			} else {
+				this.right.add(node);
+			}
+		}
+	}
+
+}

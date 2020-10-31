@@ -1,0 +1,70 @@
+package com.Jacky.BinarySortTree;
+
+import org.graalvm.compiler.core.common.type.ArithmeticOpTable.BinaryOp.Add;
+
+public class BinarySortTreeDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Node root=new Node(7);
+		Node node2=new Node(3);
+		Node node3=new Node(10);
+		Node node4=new Node(1);
+		Node node5=new Node(5);
+		Node node6=new Node(9);
+		Node node7=new Node(12);
+		root.add(node2);
+		root.add(node3);
+		root.add(node4);
+		root.add(node5);
+		root.add(node6);
+		root.add(node7);
+		root.infixOrder(root);
+
+		
+	}
+
+}
+
+class Node{
+	int value;
+	Node left;
+	Node right;
+	
+	public Node(int value) {
+		this.value = value;
+	}
+	
+	public void infixOrder(Node root) {
+		if(root.left!=null) {
+			infixOrder(root.left);
+		}
+		System.out.println(root);
+		if(root.right!=null) {
+			infixOrder(root.right);
+		}
+		
+	}
+	
+	public void add(Node node) {
+		if (node==null){
+			return;
+		}
+		if(node.value<this.value) {
+			if(this.left==null) {
+				this.left=node;
+			}else {
+				this.left.add(node);
+			}
+		}else {
+			if(this.right==null) {
+				this.right=node;
+			}else {
+				this.right.add(node);
+			}
+		}
+	}
+	
+	
+	
+}

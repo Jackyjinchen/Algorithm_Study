@@ -1,0 +1,27 @@
+package leetcodeanswer;
+
+import java.util.Arrays;
+
+public class _215数组中第k个最大元素 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Solution215 sl = new Solution215();
+		int[] nums = { 3, 2, 1, 5, 6, 4 };
+		int k = 2;
+		System.out.println(sl.findKthLargest(nums, k));
+
+	}
+
+}
+
+
+//最好采用排序算法来做。
+class Solution215 {
+	public int findKthLargest(int[] nums, int k) {
+		int ans = 0;
+		Arrays.sort(nums);
+
+		return nums[nums.length-k];
+	}
+}

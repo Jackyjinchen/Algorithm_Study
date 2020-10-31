@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="248"/>
+		<item key="DIALOG_Y_ORIGIN" value="385"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="synch"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="nums[i]+nums[j]+nums[left]+nums[right]"/>
+			<item value="synch"/>
+			<item value="add"/>
+			<item value="compareandexchangeint"/>
+			<item value="compareandexchange"/>
+			<item value="compareandswa"/>
+			<item value="compareand"/>
+			<item value="compareAndSwap"/>
+			<item value="compare"/>
+			<item value="’"/>
+			<item value="‘"/>
+			<item value="1"/>
+			<item value="1, 0, 1, 1, 1 },"/>
+			<item value="20"/>
+			<item value="160"/>
+		</list>
+		<list key="replacehistory">
+			<item value="&apos;"/>
+			<item value="&apos;1&apos;"/>
+			<item value="23"/>
+			<item value="20"/>
+			<item value="160"/>
+			<item value="KruskalDemo"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="64"/>
+		<item key="DIALOG_Y_ORIGIN" value="369"/>
+		<item key="DIALOG_WIDTH" value="300"/>
+		<item key="DIALOG_HEIGHT" value="410"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
+	</section>
+</section>

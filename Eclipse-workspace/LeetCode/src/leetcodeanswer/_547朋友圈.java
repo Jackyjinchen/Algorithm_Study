@@ -1,0 +1,17 @@
+package leetcodeanswer;
+
+public class _547≈Û”—»¶ {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Solution {
+    public int findCircleNum(int[][] M) {
+        
+    	return 0;
+    }
+}

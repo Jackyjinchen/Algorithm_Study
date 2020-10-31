@@ -1,0 +1,37 @@
+package leetcodeanswer;
+
+import java.util.Arrays;
+
+public class _快速排序基础程序 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = new int[10];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) (Math.random() * 100);
+		}
+		Solutionquicksort sl = new Solutionquicksort();
+		sl.quickSort(arr, 0, arr.length-1);
+		System.out.println(Arrays.toString(arr));
+		
+	}
+
+}
+
+
+//最好采用排序算法来做。
+class Solutionquicksort {
+	public void quickSort(int[] nums,int start, int end) {
+		
+		int pivot=left;
+		int 
+		
+		
+		
+		
+		int ans = 0;
+		Arrays.sort(nums);
+
+
+	}
+}

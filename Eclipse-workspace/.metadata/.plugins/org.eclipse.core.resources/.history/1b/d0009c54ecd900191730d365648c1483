@@ -1,0 +1,34 @@
+package VMware;
+
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class test1 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		Scanner cin = new Scanner(System.in);
+		int M, N;
+		int a, b, c;
+		HashSet hashSet = new HashSet();
+
+		while (cin.hasNextInt()) {
+
+			N = cin.nextInt();
+			M = cin.nextInt();
+			for (int i = 0; i < M; i++) {
+				a = cin.nextInt();
+				b = cin.nextInt();
+				if (cin.nextInt()==1&(a==1||b==1)) {
+					hashSet.add(a);
+					hashSet.add(b);
+				}
+
+			}
+			
+			System.out.println(hashSet.size());
+		}
+
+	}
+
+}

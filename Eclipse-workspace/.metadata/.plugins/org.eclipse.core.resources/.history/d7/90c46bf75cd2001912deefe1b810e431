@@ -1,0 +1,135 @@
+package leetcodeanswer;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class _60µÚk¸öÅÅÁÐ {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n = 3, k = 3;
+		Solution60 sl = new Solution60();
+		System.out.println(sl.getPermutation(n, k));
+
+	}
+}
+
+class Solution60 {
+
+	List<Integer> str = new LinkedList<Integer>();
+	int k;
+	int countk=0;
+	int n;
+	int[] nums;
+	boolean[] used;
+//	boolean flag = false;
+	StringBuilder ans = new StringBuilder();
+	List<String> pre = new ArrayList<>();
+	int[] factorial = { 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880 };
+
+	public String getPermutation(int n, int k) {
+		nums = new int[n];
+		used = new boolean[n];
+		this.k = k;
+		this.n = n;
+		for (int i = 0; i < n; i++) {
+			nums[i] = i + 1;
+			used[i] = false;
+		}
+		backtrack();
+
+		return ans.toString();
+	}
+
+	public void backtrack() {
+//		if (n == 0) {
+			countk++;
+			if (countk == k) {
+				
+				for (String c : pre) {
+					ans.append(c);
+					System.out.println(ans+"x");
+				}
+				return;
+			}
+			
+//		}
+		for (int i = 0; i < n; i++) {
+//			int temp=str.get(i);
+//			str.remove(i);
+
+//			n--;
+			if (used[i]) {
+				continue;
+			}
+			int ps = factorial[n-1-countk];
+			if (ps < countk) {
+				countk -= ps;
+                continue;
+            }
+			pre.add(nums[i] + "");
+			used[i] = true;
+			backtrack();
+//			countk--;
+//			if (flag) {
+//				ans.insert(0, temp);
+//				return;
+//			}
+//			n++;
+//			str.add(i, temp);
+
+		}
+
+	}
+
+}
+
+//class Solution60 {
+//
+//	List<Integer> str = new LinkedList<Integer>();
+//	int k;
+//	int n;
+//	boolean flag=false;
+//	StringBuilder ans = new StringBuilder();
+//	int[] factorial = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880};
+//	public String getPermutation(int n, int k) {
+//		
+//		this.k = k;
+//		this.n = n;
+//		for (int i = 1; i <= n; i++) {
+//			str.add(i);
+//		}
+//		backtrack();
+//
+//		return ans.toString();
+//	}
+//
+//	public void backtrack() {
+//		if (n==0) {
+//			k--;
+//			if (k==0) {
+//				flag=true;
+////				System.out.println(ans+"ans");
+//			}
+//			return;
+//		}
+//		for (int i = 1; i <= n; i++) {
+//			int temp=str.get(i-1);
+////			ans.append(temp);
+//			str.remove(i-1);
+//			n--;
+//			backtrack();
+//			if(flag) {
+//				ans.insert(0, temp);			
+//				return;
+//			}
+//			n++;
+////			ans.deleteCharAt(ans.length() - 1);
+//			str.add(i - 1, temp);
+//
+//		}
+//
+//	}
+//
+//}

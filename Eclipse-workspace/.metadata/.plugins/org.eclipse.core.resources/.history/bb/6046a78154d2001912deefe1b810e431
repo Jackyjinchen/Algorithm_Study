@@ -1,0 +1,64 @@
+package leetcodeanswer;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class _60µÚk¸öÅÅÁĞ {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n = 4, k = 3;
+		Solution60 sl = new Solution60();
+		System.out.println(sl.getPermutation(n, k));
+
+	}
+}
+
+class Solution60 {
+
+	List<Integer> str = new LinkedList<Integer>();
+	int countk = 0;
+	int countn = 1;
+	int k;
+	int n;
+	StringBuilder ans = new StringBuilder();
+
+	public String getPermutation(int n, int k) {
+		this.k = k;
+		this.n = n;
+		for (int i = 1; i <= n; i++) {
+			str.add(i);
+		}
+		backtrack(n, countk);
+
+		return "";
+	}
+
+	public void backtrack(int n, int countk) {
+//		System.out.println("backtrack");
+		if (n==0) {
+			System.out.println(ans+"ans");
+			return;
+		}
+		for (int i = 1; i <= n; i++) {
+//			countn++;
+//			countk++;
+
+			ans.append(str.get(i-1));
+			str.remove(i-1);
+			n--;
+			backtrack(n, countk);
+			n++;
+			ans.deleteCharAt(ans.length() - 1);
+			str.add(i - 1, i);
+//			System.out.println(str+"str");
+
+//			countk--;
+//			countn--;
+
+		}
+
+	}
+
+}

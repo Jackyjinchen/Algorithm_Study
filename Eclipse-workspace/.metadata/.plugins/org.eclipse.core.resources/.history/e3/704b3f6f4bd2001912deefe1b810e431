@@ -1,0 +1,26 @@
+package leetcodeanswer;
+
+public class _60µÚk¸öÅÅÁĞ {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n = 3, k = 3;
+		Solution60 sl = new Solution60();
+		System.out.println(sl.getPermutation(n, k));
+		
+	}
+
+}
+
+class Solution60 {
+    public String getPermutation(int n, int k) {
+        
+    	
+    	
+    	
+    	
+    	
+    	
+    	return "";
+    }
+}
